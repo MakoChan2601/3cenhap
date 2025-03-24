@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3ce-Mypham nhapkhau</title>
+<link href="img/naver_favicon.ico" rel="icon" type="image/x-icon">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/thu-vien-css.css" rel="stylesheet">
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ccc2728dc0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <ul>
+      <li><a href="#">Tải ứng dụng</a></li>
+      <li><a href="#">Đăng nhập</a></li>
+      <li><a href="#">Đăng ký</a></li>
+      <li><a href="#">Theo dõi đơn hàng</a></li>
+      <li><a href="#">Trung tâm chăm sóc</a></li>
+      <li><a href="#">Chính sách</a></li>
+      <li><a href="#">Global</a></li>
+    </ul>
+  </div>
+</div>
+<header>
+  <div class="gach-dai">
+    <div class="container">
+      <nav>
+        <div class="header-top">
+          <div class="header-top-left">
+            <div class="logo"> <a href="index.html"><img src="img/logo black.png" alt="" width="100"></a></div>
+            <div class="search-bar">
+              <input type="text" placeholder="VOUCHER 45% - Đơn từ 99k | Duy nhất 29.03">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass icon-search"></i> </button>
+            </div>
+          </div>
+          <div class="header-top-right"> <a href="#">Tìm 3CE gần bạn</a> <a href="#">Sản phẩm đã xem gần đây</a> <a href="#" class="cart-ion"><i class="fa-regular fa-heart" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i></a> <a href="#" class="cart-ion">
+            <div class="cart-container"> <i class="fa-solid fa-cart-shopping" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i> <span class="notifi-cart">0</span> </div>
+            </a> <!--language select-->
+            <div class="language">
+              <div class="language-select" onclick="toggleDropdown()"> <img src="img/VI.png" alt="Vietnam flag" id="currentFlag"/> <span id="currentLanguage">VI</span> </div>
+              <div class="language-option" id="languageDropdown">
+                <div class="language-click" onclick="changeLanguage('VI', 'Tiếng Việt','img/VI.png', 'Vietnam flag')"> <img src="img/VI.png" alt="Vietnam flag" /> <span>Tiếng Việt</span> </div>
+                <div class="language-click" onclick="changeLanguage('EN', 'English','img/usa.png', 'USA flag')"> <img src="img/usa.png" alt="USA flag" /> <span>English</span> </div>
+                <div class="language-click" onclick="changeLanguage('JP', '日本語','img/JP.png', 'Japan flag')"> <img src="img/JP.png" alt="Japan flag" /> <span>日本語</span> </div>
+                <div class="language-click" onclick="changeLanguage('KR', '한국어','img/Kr.png', 'Korea flag')"> <img src="img/Kr.png" alt="Korea flag" /> <span>한국어</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <script>
+        function toggleDropdown() {
+            document.getElementById("languageDropdown").classList.toggle("show");
+        }
+
+        function changeLanguage(code, name, flagSrc, flagAlt) {
+            // Thay đổi ngôn ngữ
+            document.getElementById("currentLanguage").innerText = code;
+            
+            // Thay đổi hình ảnh cờ
+            var currentFlag = document.getElementById("currentFlag");
+            currentFlag.src = flagSrc;
+            currentFlag.alt = flagAlt;
+            
+            // Đóng dropdown sau khi chọn
+            document.getElementById("languageDropdown").classList.remove("show");
+            
+            console.log("Changed to: " + name + " with flag: " + flagAlt);
+                
+        }
+
+        // Đóng dropdown khi click ngoài
+        window.onclick = function(event) {
+            if (!event.target.matches('.language-selected') && 
+                !event.target.matches('.language-selected img') && 
+                !event.target.matches('.language-selected span')) {
+                var dropdowns = document.getElementsByClassName("language-options");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+  
+	  <div class="menu-main gach-daidam">
+    <div class="container">
+      <div class="menu d-flex justify-center">
+        <ul>
+          <li> <a href="danh-muc.html"><i class="fa-solid fa-bars mr-10"></i> Danh mục</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">❤️ Sản phẩm bán chạy ❤️</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Sản phẩm mới</a> </li>
+          <li> <a class="text-hong" href="#">+Sale+</a></li>
+          <li> <a href="#"> Độc quyền thành viên</a>
+            <ul class="drop-down">
+              <li><a href="#">Đặc quyền thành viên</a></li>
+              <li><a href="#">Ưu đãi thành viên</a></li>
+            </ul>
+          </li>
+          <li> <a href="tin tuc.html"> Tin tức</a></li>
+          <li> <a href="lien he.html"> Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+</header>
+	<div class="tintuc">
+		<div class="container">
+			<div class="tintuc-header">
+				 <h1 class="tintuc-title">3CE Glazy Lip Glow – Vẻ đẹp căng mọng tựa sương mai</h1>
+				<div class="tintuc-info">
+                <span class="tintuc-date">Ngày đăng: 15/03/2025</span>
+                <span class="tintuc-author">Tác giả: 3CE Beauty Team</span>
+                <span class="tintuc-type">Danh mục: New Edition</span>
+            </div>
+			</div>
+			<div class="tintuc-container">
+				
+            <div class="tintucbanner-image justify-center">
+                
+            <img src="img/banner 1.jpg" width="1256px" height="auto" alt="Glazy lip glow"> </div>
+
+            <div class="tintuc-text">
+                <p>Nhà 3CE lại tiếp tục “làm mưa làm gió” trên thị trường làm đẹp với dòng son dưỡng mới toanh – Glazy Lip Glow. Giữ đúng tinh thần trẻ trung và hiện đại, Glazy Lip Glow mang đến cho đôi môi vẻ căng mọng, ẩm mượt và rạng rỡ như phủ một lớp sương nhẹ, giúp tôn lên vẻ đẹp tự nhiên đầy sức sống.</p>
+
+                <h2>1. Thiết kế thời thượng – Đậm chất 3CE</h2>
+                <p>Không nằm ngoài xu hướng “minimal but chic”, Glazy Lip Glow sở hữu thiết kế trong suốt với hiệu ứng bóng nhẹ, sang trọng nhưng không kém phần ngọt ngào. Thỏi son nhỏ gọn với tông màu pastel tinh tế dễ dàng trở thành “must-have item” trong túi xách của các cô nàng hiện đại.</p>
+				<div class="tintuc-higlight">
+					<div class= "row">
+						<div class="col-6">
+							<img class="img-100" src="img/800x.jpg" alt="3CE Glazy lip glow">
+						</div>
+						<div class="col-6">
+							<div class="tintuc-product">
+                        <h2>3CE Glazy Lip GLOW </h2>
+                        <p>son dưỡng và son bóng, thiên về hiệu ứng "glossy" (bóng nhẹ) tự nhiên.</p>
+                        <p class="tintuc-price">350.000 VNĐ</p>
+                        <a href="#" class="tintuc-link">Xem chi tiết</a>
+                    </div>
+						</div>
+					</div>
+				</div>
+				<h2>2. Chất son glowy dưỡng ẩm tối ưu</h2>
+                <p>Với công thức chứa các thành phần dưỡng ẩm chuyên sâu như dầu jojoba, bơ hạt mỡ và vitamin E, Glazy Lip Glow không chỉ giúp dưỡng mềm môi, ngăn ngừa tình trạng khô nứt mà còn tạo hiệu ứng căng mọng, bóng nhẹ tự nhiên – xu hướng môi "glass skin" đang được các tín đồ làm đẹp Châu Á yêu thích.</p>
+				
+				<div class="row d-flex justify-between">
+					<div class="col-6">
+				<img src="img/3cevietnam-01-c8592a2e-7fab-427c-89e2-b587e03faecd.webp" class="img-100"  alt="3CE Glazy lip glow"></div>
+					<div class="col-6">
+				<img src="img/liptint.jpg" class="img-100" alt="3CE Glazy lip glow"></div>
+				</div>
+				<h2>3.Bảng màu ngọt ngào – Dễ ứng dụng</h2>
+                <p>Glazy Lip Glow ra mắt với bảng màu nhẹ nhàng, tươi tắn, phù hợp cho cả make-up no-makeup hay trang điểm tông trong trẻo Hàn Quốc:</p>
+		        
+                    <p>#Petal Dew: Hồng phớt nhẹ nhàng, chuẩn nàng thơ.</p>
+                    <p>#Coral Mist: Cam san hô trong trẻo, tươi sáng.</p>
+                   <p>#Rosy Drop: Hồng đất pha cam trendy, dễ phối.</p>
+                    <p>#Clear Sheen: Trong suốt tự nhiên, lý tưởng cho lớp nền dưỡng ẩm.</p>
+                
+					
+                      <img class="img-100" src="img/3cevietnam-019.webp" alt="Phong cách trang điểm Waterlight">
+                    
+
+                <h2>4. Đa năng – Son dưỡng kiêm lớp base</h2>
+                <p>Không chỉ là son dưỡng thường ngày, Glazy Lip Glow còn là lớp base hoàn hảo trước khi đánh son màu, giúp son màu bám mịn và lâu trôi hơn. Hoặc chỉ cần thoa một lớp mỏng, bạn đã có ngay đôi môi bóng nhẹ, căng mọng chuẩn xu hướng “juicy lips”.</p>
+				
+                <img class="img-100"src="img/anh_chup_man_hinh_2025-02-12_luc_02.webp" width="1200px" alt="Phong cách trang điểm Waterlight">
+                  
+
+                
+                <h2>5. Thông điệp của 3CE</h2>
+                <p>Với Glazy Lip Glow, 3CE mong muốn tôn vinh vẻ đẹp tự nhiên, giúp phái đẹp luôn tự tin tỏa sáng với đôi môi ngậm sương đầy sức sống – dù ở bất cứ đâu, bất cứ thời điểm nào khác nhau trong ngày.</p>
+                <p>Hãy cập nhật các xu hướng mới nhất và thử nghiệm với những sản phẩm của 3CE để luôn giữ được vẻ đẹp tươi trẻ và thời thượng nhất!</p>
+				
+                        <img class="img-100" src="img/8278744448215589873.jpg">
+                   
+            </div>
+
+            <div class="tintuc-tag">
+                <span class="tag-title">Tags:</span>
+                <a href="#" class="tag">Makeup</a>
+                <a href="#" class="tag">Sản phẩm mới 2025</a>
+                <a href="#" class="tag">Dưỡng môi xinh yêu</a>
+                <a href="#" class="tag">3CE</a>
+                <a href="#" class="tag">Glazy Lip Glow</a>
+            </div>
+
+ 
+            <div class="tintuc-social-share">
+                <span>Chia sẻ:</span>
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/3ce_official/" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn pinterest"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+			<div class="other-posts">
+            <h3 class="other-posts-title">Bài viết liên quan</h3>
+			<div class="row d-flex justify-center">
+				 <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/coral_model.webp" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Xu hướng makeup gây sốt năm 2025 cho thế hệ gen Z </h4>
+          <p class="post-date">10/03/2025</p>
+		</div> </a>
+      </div> </div> 
+	  <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/tin tuc 2.jpg" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Làm sao để sở hữu một đôi mắt hút hồn, ấn tượng Crush </h4>
+          <p class="post-date">05/03/2025</p>
+		</div> </a>
+      </div> </div> 
+	  <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/tin tuc 3.jpg" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Hướng dẫn lựa chọn màu son phù hợp theo personal color</h4>
+          <p class="post-date">28/02/2025</p>
+		</div> </a>
+      </div> </div> 
+			</div>	
+			</div>
+			<div class="blog-comments">
+            <h3 class="section-title">Bình luận (0)</h3>
+            
+            <div class="comment-form">
+                <h4>Để lại bình luận của bạn</h4>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Họ tên" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Nội dung bình luận" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gửi bình luận</button>
+                </form>
+            </div>
+
+           
+</div>
+			</div>
+			
+		</div>
+		
+	
+</body>
+<!--footer-->
+<footer>
+  <div class="container">
+	  <div class="row d-flex justify-between">
+		  <div class="col-4">
+			  <div class="footer-logo">  <a href="#" ><img src="img/logo white.png" width="80px" alt="logo 3ce"> </a>
+			  <h3>3CE-Viet Nam</h3>
+			  </div>
+			  <div class="gray">
+			  <p><b>Trụ sở Việt Nam:</b>Tầng 10, Saigon center, quận 1, Tp.HCM</p>
+      <p><strong>Email:</strong>info@3cevietnam.com</p>  
+      <p>Công ty 3CE VIỆT NAM, MST/ĐKKD/QĐTL: 0317189971 Đăng ký thay đổi lần thứ 4 ngày 29 tháng 05 năm 2024 - Cấp tại HCM</p>
+				  </div>
+			  <div class="footer-signup">
+        <h4>ĐĂNG KÝ TRỞ THÀNH HỘI VIÊN NHẬN ƯU ĐÃI HẤP DẪN</h4>
+        <div class="signup-form">
+          <input type="email" placeholder="nhập email của bạn" class="email-input">
+          <button class="signup-btn">Gửi</button>
+        </div>
+      </div>
+		  </div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>THÔNG TIN</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Ưu đãi thành viên</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+	  	</div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>MUA SẮM</h4>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Tìm kiếm</a></li>
+          <li><a href="#">Bán chạy</a></li>
+          <li><a href="#">Ưu đãi</a></li>
+        </ul>
+      </div>
+	   
+	  	</div>
+		  <div class="col-2">
+		  <div class="footer-col">
+        <h4>CÁC CHÍNH SÁCH</h4>
+        <ul>
+          <li><a href="#">Chính sách bán hàng</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách đổi trả - bảo hành</a></li>
+          <li><a href="#">Phương thức thanh toán</a></li>
+          <li><a href="#">Điều khoản & Điều kiện</a></li>
+          <li><a href="#">Chính sách kiểm hàng</a></li>
+        </ul>
+      </div> </div>
+		  <div class="col-2">
+			 <h4>THEO DÕI CHÚNG TÔI</h4>
+        <div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-zalo"></i></a></div>
+        <div class="trust-badge"><img src="img/bộ công thương.png" alt="Đã thông báo Bộ Công Thương">
+			  </div> 
+	  </div> </div>
+</div>
+    
+  <!-- Copyright section -->
+<div class="gach-trang">
+  <div class="copyright">
+    <p>© Copyright 2025, Công ty 3CE Việt Nam. All rights reserved.</p>
+  </div></div>
+</footer>
+</html>

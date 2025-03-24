@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+*{ box-sizing: border-box}
+body{
+  font-family: 'Signika', sans-serif;font-size: 16px;color: #666666;margin: 0;  
+}
+.container{ width: 80%; margin: auto}
+.img-100{ width: 100%; height: auto}
+.img-circle{ border-radius: 50%}
+.row{ display: flex; flex-wrap: wrap}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+  padding: 15px;
+  /*border: 1px solid red;*/
+}
+
+
+
+.text-right{ text-align: right}
+.text-center { text-align: center}
+.d-flex{ display: flex}
+
+.d-none{ display: none}
+.justify-center{ justify-content: center}
+.justify-between{ justify-content: space-between}
+.justify-around{ justify-content: space-around}
+.flex-row-reverse{flex-direction: row-reverse}
+.align-item-center{align-items: center}
+
+.btn-fill-primary
+{
+    background-color:#F87503;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+     border: 2px solid #F87503;
+    transition: all .5s
+}
+.btn-fill-primary:hover{
+     background-color:#Ff0;
+    color: #333
+}
+.btn-outline-primary
+{
+    border: 2px solid #F87503;
+    background: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+     transition: all .5s
+}
+.btn-outline-primary:hover{
+     background-color:#F87503;
+    color: #333
+}
+.mb-10{
+	margin-bottom: 10px; 
+}
+.text-hong{
+	color:#f992c3; 
+}
+.gach-dai{
+	border-bottom: 1px solid #F7A4D3;box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.gach-daidam{
+	border-bottom: 2.5px solid #F7A4D3;box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+}
+.gach-trang{
+	 border-top: 1px solid #eee;
+}
+.vien a{
+	border:1px solid gray; 
+}
+.bg-vang{
+	background-image: linear-gradient(to left, #fdedde 0%, #ffffff 100%)
+}
+.bg-hong{
+	background-image: linear-gradient(to right, #ffffff 0%, #f8eaea 100%)
+}
+.bg-2{
+	backgorund-image:linear-gradient(to right, #ffffff 0%, #c3ded7 100%)
+}
+.ptb{
+	padding: 50px 0px;clear: both
+}
+.gray{
+	color: #666;
+  font-size: 14px;
+  transition: color 0.3s;
+}

@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3ce-Mypham nhapkhau</title>
+<link href="img/naver_favicon.ico" rel="icon" type="image/x-icon">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/thu-vien-css.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.default.css" rel="stylesheet">
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ccc2728dc0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="top-bar">
+  <div class="container">
+    <ul>
+      <li><a href="#">Tải ứng dụng</a></li>
+      <li><a href="#">Đăng nhập</a></li>
+      <li><a href="#">Đăng ký</a></li>
+      <li><a href="#">Theo dõi đơn hàng</a></li>
+      <li><a href="#">Trung tâm chăm sóc</a></li>
+      <li><a href="#">Chính sách</a></li>
+      <li><a href="#">Global</a></li>
+    </ul>
+  </div>
+</div>
+<header>
+  <div class="gach-dai">
+    <div class="container">
+      <nav>
+        <div class="header-top">
+          <div class="header-top-left">
+            <div class="logo"> <a href="#"><img src="img/logo black.png" alt="" width="100"></a></div>
+            <div class="search-bar">
+              <input type="text" placeholder="VOUCHER 45% - Đơn từ 99k | Duy nhất 29.03">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass icon-search"></i> </button>
+            </div>
+          </div>
+          <div class="header-top-right"> <a href="#">Tìm 3CE gần bạn</a> <a href="#">Sản phẩm đã xem gần đây</a> <a href="#" class="cart-ion"><i class="fa-regular fa-heart" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i></a> <a href="#" class="cart-ion">
+            <div class="cart-container"> <i class="fa-solid fa-cart-shopping" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i> <span class="notifi-cart">0</span> </div>
+            </a> <!--language select-->
+            <div class="language">
+              <div class="language-select" onclick="toggleDropdown()"> <img src="img/VI.png" alt="Vietnam flag" id="currentFlag"/> <span id="currentLanguage">VI</span> </div>
+              <div class="language-option" id="languageDropdown">
+                <div class="language-click" onclick="changeLanguage('VI', 'Tiếng Việt','img/VI.png', 'Vietnam flag')"> <img src="img/VI.png" alt="Vietnam flag" /> <span>Tiếng Việt</span> </div>
+                <div class="language-click" onclick="changeLanguage('EN', 'English','img/usa.png', 'USA flag')"> <img src="img/usa.png" alt="USA flag" /> <span>English</span> </div>
+                <div class="language-click" onclick="changeLanguage('JP', '日本語','img/JP.png', 'Japan flag')"> <img src="img/JP.png" alt="Japan flag" /> <span>日本語</span> </div>
+                <div class="language-click" onclick="changeLanguage('KR', '한국어','img/Kr.png', 'Korea flag')"> <img src="img/Kr.png" alt="Korea flag" /> <span>한국어</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <script>
+        function toggleDropdown() {
+            document.getElementById("languageDropdown").classList.toggle("show");
+        }
+
+        function changeLanguage(code, name, flagSrc, flagAlt) {
+            // Thay đổi ngôn ngữ
+            document.getElementById("currentLanguage").innerText = code;
+            
+            // Thay đổi hình ảnh cờ
+            var currentFlag = document.getElementById("currentFlag");
+            currentFlag.src = flagSrc;
+            currentFlag.alt = flagAlt;
+            
+            // Đóng dropdown sau khi chọn
+            document.getElementById("languageDropdown").classList.remove("show");
+            
+            console.log("Changed to: " + name + " with flag: " + flagAlt);
+                
+        }
+
+        // Đóng dropdown khi click ngoài
+        window.onclick = function(event) {
+            if (!event.target.matches('.language-selected') && 
+                !event.target.matches('.language-selected img') && 
+                !event.target.matches('.language-selected span')) {
+                var dropdowns = document.getElementsByClassName("language-options");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+  
+	  <div class="menu-main gach-daidam">
+    <div class="container">
+      <div class="menu d-flex justify-center">
+        <ul>
+          <li> <a href="danh-muc.html"><i class="fa-solid fa-bars mr-10"></i> Danh mục</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">❤️ Sản phẩm bán chạy ❤️</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Sản phẩm mới</a> </li>
+          <li> <a class="text-hong" href="#">+Sale+</a></li>
+          <li> <a href="#"> Độc quyền thành viên</a>
+            <ul class="drop-down">
+              <li><a href="#">Đặc quyền thành viên</a></li>
+              <li><a href="#">Ưu đãi thành viên</a></li>
+            </ul>
+          </li>
+          <li> <a href="tin tuc.html"> Tin tức</a></li>
+          <li> <a href="lien he.html"> Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+</header>
+<!--xong phần header-->
+<div class="owl-carousel owl-theme banner-container" id="slide">
+  <div class="item"> <img src="img/banner 1.jpg" alt=""></div>
+  <div class="item"> <img src="img/main_02_pc.jpg" alt=""></div>
+  <div class="item"> <img src="img/5.jpg" alt=""></div>
+  <div class="item"> <img src="img/3.jpg" alt=""></div>
+</div>
+<!--xong phần banner-->
+
+<div class="notification-banner">
+  <div class="container d-flex justify-between">
+    <div class="banner-content"> 
+      <!--<span class="notification-icon">🔔</span>--> 
+      <i class="fa-solid fa-bell mr-10"></i> <span class="notification-text">Nhập FIRST - Giảm 45% cho đơn hàng đầu tiên</span> </div>
+    <div class="banner-content"> <i class="fa-solid fa-truck mr-10"></i> <span class="notification-text">Miễn phí giao hàng toàn quốc đơn từ 99k</span> </div>
+    <div class="banner-content"> <i class="fa-solid fa-truck-fast mr-10"></i> <span class="notification-text">Giao nhanh nội thành trong 2h</span></div>
+  </div>
+</div>
+<!-- xong Notification banner --> 
+<!-- newproduct section -->
+<section class="section bg-vang">
+	<div class="container justify-center align-item-center">
+  <div class="newproduct-section">
+    <h2 class="section-text section-header">SẢN PHẨM MỚI</h2>
+    <video autoplay muted loop width="1062px" height="596px" class="video">
+      <source src="video/newproduct.mp4" type="video/mp4">
+    </video>
+  </div> </div>
+</section>
+<!--sản phẩm bán chạy-->
+
+<section class="section">
+	<div class="container">
+  <div class="section-header">
+    <h2 class="section-text">Sản phẩm bán chạy </h2>
+    <div class="bestseller-select">
+      <ul>
+        <li>
+          <button class="bestseller-select-item" aria-selected="true">Mặt</button>
+        </li>
+        <li>
+          <button class="bestseller-select-item">Mắt</button>
+        </li>
+        <li>
+          <button class="bestseller-select-item">Môi</button>
+        </li>
+        <li>
+          <button class="bestseller-select-item">Phụ kiện</button>
+        </li>
+      </ul>
+    </div>
+    <!--<a href="#" class="view-all">Xem thêm</a>--> 
+  </div>
+  <div class="row d-flex justify-center"> 
+    <!-- Product 1 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/ban chay 1.jpg" alt="">
+          <div class="rank-badge">1</div>
+        </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">16%</span> <span class="current-price">319.000 vnđ</span> <span class="original-price">448.000 vnđ</span> </div>
+          <h3 class="product-name">Son len mịn lì nịnh môi 3CE Cashmere Hug Lipstick </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.89</span> <span class="review-count">Đã bán 21,2k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/ban chay 2.jpg" alt="">
+          <div class="rank-badge">2</div>
+        </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">13%</span> <span class="current-price">328.000 vnđ</span> <span class="original-price">378.000 vnđ</span> </div>
+          <h3 class="product-name"> Son Kem 3CE Cho Viền Môi Mờ Ảo Không Lem Blur Water Tint 4.6g </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.76</span> <span class="review-count">Đã bán 19,2k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/ban chay 3.jpg" alt="">
+          <div class="rank-badge">3</div>
+        </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">20%</span> <span class="current-price">309.000 vnđ</span> <span class="original-price">388.000 vnđ</span> </div>
+          <h3 class="product-name">Phấn Má Hồng Mịn Lì 3CE Face Blush 5.5g </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.65</span> <span class="review-count">Đã bán 16,9k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/banchay4.jpg" alt="">
+          <div class="rank-badge">4</div>
+        </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">11%</span> <span class="current-price">778.000 vnđ</span> <span class="original-price">878.000 vnđ</span> </div>
+          <h3 class="product-name">Bảng Phấn Mắt 3CE 9 màu lâu trôi 3CE Multi Eye Color Palette 8.5g </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.54</span> <span class="review-count">Đã bán 12,7k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+  </div>
+  <div class="view-more"> <a href="#" class="view-more-btn">Xem thêm sản phẩm</a> </div>
+		</div>
+</section>
+<!--Siêu sale tháng 3-->
+
+<section class="section bg-hong">
+<div class="container">	
+  <div class="section-header">
+    <h2 class="section-text">+Siêu Deal tháng 3+ </h2>
+  </div>
+  <div class="row d-flex justify-center"> 
+    <!-- Product 1 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/sale 1.jpg" alt="">
+      
+			 <div class="sale-badge">Sale</div>
+		
+        </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">17%</span> <span class="current-price">398.000 vnđ</span> <span class="original-price">478.000 vnđ</span> </div>
+          <h3 class="product-name">Son môi 3CE mịn lì nhẹ tênh 3CE Blur Matte Lipstick 4g (tặng gương heart)</h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.9</span> <span class="review-count">Đã bán 137</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/sale 2.jpg" alt="">
+			 <div class="sale-badge">Sale</div>
+		  </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">14%</span> <span class="current-price">358.000 vnđ</span> <span class="original-price">418.000 vnđ</span> </div>
+          <h3 class="product-name"> Son bóng dưỡng môi bắt sáng 3CE Shine Reflector 1.7g </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.74</span> <span class="review-count">Đã bán 3,775k</span> </div>
+          <div class="voucher">Giảm 30% fcho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/sale 3.jpg" alt="">
+			<div class="sale-badge">Sale</div>
+		  </div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">27%</span> <span class="current-price">416.900 vnđ</span> <span class="original-price">572.424 vnđ</span> </div>
+          <h3 class="product-name">Bút kẻ mắt My Ring 0,5ml (+ Móc khoa gương 3CE) </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.5</span> <span class="review-count">Đã bán 6,8k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="col-3">
+      <div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/sale 4.jpg" alt="">
+		  <div class="sale-badge">Sale</div></div>
+        <div class="product-in4">
+          <div class="discount-price"> <span class="discount-lable">20%</span> <span class="current-price">309.000 vnđ</span> <span class="original-price">388.000 vnđ</span> </div>
+          <h3 class="product-name">Phấn Má Hồng Mịn Lì 3CE Face Blush 5.5g (+ tặng gương) </h3>
+          <div class="rating-info"> <span class="rating-count"><i class="fa-solid fa-star start-color"></i> 4.54</span> <span class="review-count">Đã bán 12,7k</span> </div>
+          <div class="voucher">Giảm 30% cho thành viên</div>
+        </div>
+        </a> </div>
+    </div>
+  </div>
+  <div class="view-more"> <a href="#" class="view-more-btn">Xem thêm sản phẩm</a> </div>
+	</div>
+</section>
+
+<!--Độc quyền thành viên-->
+<section class="section">
+	<div class="container">
+  <div class="section-header">
+    <h2 class="section-text">Độc quyền thành viên </h2>
+    <div class="bestseller-select">
+      <ul>
+        <li>
+          <button class="bestseller-select-item" aria-selected="true">Đặc quyền thành viên</button>
+        </li>
+        <li>
+          <button class="bestseller-select-item">Ưu đãi thành viên</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row d-flex justify-center ourmoment-container ">
+    <div class="col-6"> <img src="img/4fbad447904944b30da01893f60ab1d9.jpg" alt="" class="img-100"> </div>
+    <div class="col-6 text">
+      <h3 class="thanhvien-head"><b>CHƯƠNG TRÌNH "OUR MOMENT"</b></h3>
+      <p><strong>Chia sẻ khoảnh khắc – Nhận quà hấp dẫn</strong></p>
+      <br>
+      <div class="thanhvien-text">
+        <h4>Cách tham gia:</h4>
+        <ol>
+          <li>Mua bất kì sản phẩm mới của <strong>3CE</strong>.</li>
+          <li>Review cảm nhận (viết hoặc video) trên website/mạng xã hội kèm hashtag:<br>
+            <code>#OurMomentBy3CE</code> </li>
+          <li>Gửi link review về cho chúng tôi.</li>
+        </ol>
+        <br>
+        <h4>Quyền lợi:</h4>
+        <ul>
+          <li>🎁 Giảm <b>15%</b> cho đơn tiếp theo</li>
+          <li>💎 Tích lũy điểm đổi quà (<b>x2</b> điểm cho mỗi review)</li>
+          <li>🌟 Cơ hội xuất hiện trên website/social của <strong>3CE</strong></li>
+          <li>🎉 Quà đặc biệt hàng tháng cho review nổi bật</li>
+        </ul>
+        <br>
+        <p><em>Hãy để khoảnh khắc của bạn lan tỏa và nhận ngay những ưu đãi từ <br>
+          "Our Moment"!</em></p>
+      </div>
+      <button id="showFormBtn">Đăng ký tham gia</button>
+ <!-- Form đăng ký (ẩn) -->
+      <form id="ourMomentForm" style="display: none; margin-top: 20px;">
+        <input type="text" id="name" placeholder="Họ và tên" required>
+        <input type="email" id="email" placeholder="Nhập email" required>
+        <input type="url" id="reviewLink" placeholder="Link bài review" required>
+        <textarea id="message" placeholder="Ghi chú (nếu có)" rows="3"></textarea>
+        <button type="submit">Gửi đăng ký</button>
+      </form>
+    </div>
+    <script>
+        const showFormBtn = document.getElementById('showFormBtn');
+        const form = document.getElementById('ourMomentForm');
+
+        showFormBtn.addEventListener('click', function () {
+            form.style.display = 'block';
+            showFormBtn.style.display = 'none';
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            alert(`Cảm ơn ${name} đã tham gia "Our Moment"! Chúng tôi sẽ liên hệ qua email: ${email}.`);
+            form.reset();
+        });
+    </script> 
+  </div>
+	</div>
+</section>
+<!--Tin tuc-->
+<section class="section bg-vang">
+	<div class="container">
+  <div class="section-header">
+    <h2 class="section-text">tin tức</h2>
+  </div>
+  <div class="row d-flex justify-center">
+    <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/7b67ba335f1d6d16632cd6318f68b2e6 (1).jpg" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Xu hướng makeup gây sốt năm 2025 cho thế hệ gen Z </h4>
+          <p class="post-date">10/03/2025</p>
+		</div> </a>
+      </div> </div> 
+	  <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/tin tuc 2.jpg" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Làm sao để sở hữu một đôi mắt hút hồn, ấn tượng Crush </h4>
+          <p class="post-date">05/03/2025</p>
+		</div> </a>
+      </div> </div> 
+	  <div class="col-4">
+	<div class="product"> <a href="#">
+        <div class="product-img"> <img src="img/tin tuc 3.jpg" alt="Bài viết liên quan"> </div>
+        <div class="product-in4">
+          <h4>Hướng dẫn lựa chọn màu son phù hợp theo personal color</h4>
+          <p class="post-date">28/02/2025</p>
+		</div> </a>
+      </div> </div> 
+		
+	  </div>  
+    <div class="view-more"> <a href="#" class="view-more-btn">Xem thêm</a> </div>
+  </div>
+</section>
+<section>
+  <div clsss="section">
+		<div class="container ptb">
+		<div class="row d-flex justify-between">
+			<div class="col-6"> <img src="img/hinh duoi.jpg" alt="" class="img-100"></div>
+			 <div class="col-6"> <img src="img/20191205_subscribe_banner_event_re.jpg" alt="" class="img-100"></div>
+			 
+   
+			</div></div>
+		</div>
+	
+</section>
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script src="js/owl.carousel.js"></script> 
+<script src="js/control.js"></script> 
+<script src="js/slider.js"></script> 
+<script src="js/langue dropdown.js"></script>
+</body>
+<!--footer-->
+<footer>
+  <div class="container">
+	  <div class="row d-flex justify-between">
+		  <div class="col-4">
+			  <div class="footer-logo">  <a href="#" ><img src="img/logo white.png" width="80px" alt="logo 3ce"> </a>
+			  <h3>3CE-Viet Nam</h3>
+			  </div>
+			  <div class="gray">
+			  <p><b>Trụ sở Việt Nam:</b>Tầng 10, Saigon center, quận 1, Tp.HCM</p>
+      <p><strong>Email:</strong>info@3cevietnam.com</p>  
+      <p>Công ty 3CE VIỆT NAM, MST/ĐKKD/QĐTL: 0317189971 Đăng ký thay đổi lần thứ 4 ngày 29 tháng 05 năm 2024 - Cấp tại HCM</p>
+				  </div>
+			  <div class="footer-signup">
+        <h4>ĐĂNG KÝ TRỞ THÀNH HỘI VIÊN NHẬN ƯU ĐÃI HẤP DẪN</h4>
+        <div class="signup-form">
+          <input type="email" placeholder="nhập email của bạn" class="email-input">
+          <button class="signup-btn">Gửi</button>
+        </div>
+      </div>
+		  </div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>THÔNG TIN</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Ưu đãi thành viên</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+	  	</div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>MUA SẮM</h4>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Tìm kiếm</a></li>
+          <li><a href="#">Bán chạy</a></li>
+          <li><a href="#">Ưu đãi</a></li>
+        </ul>
+      </div>
+	   
+	  	</div>
+		  <div class="col-2">
+		  <div class="footer-col">
+        <h4>CÁC CHÍNH SÁCH</h4>
+        <ul>
+          <li><a href="#">Chính sách bán hàng</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách đổi trả - bảo hành</a></li>
+          <li><a href="#">Phương thức thanh toán</a></li>
+          <li><a href="#">Điều khoản & Điều kiện</a></li>
+          <li><a href="#">Chính sách kiểm hàng</a></li>
+        </ul>
+      </div> </div>
+		  <div class="col-2">
+			 <h4>THEO DÕI CHÚNG TÔI</h4>
+        <div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-zalo"></i></a></div>
+        <div class="trust-badge"><img src="img/bộ công thương.png" alt="Đã thông báo Bộ Công Thương">
+			  </div> 
+	  </div> </div>
+</div>
+    
+  <!-- Copyright section -->
+<div class="gach-trang">
+  <div class="copyright">
+    <p>© Copyright 2025, Công ty 3CE Việt Nam. All rights reserved.</p>
+  </div></div>
+</footer>
+</html>

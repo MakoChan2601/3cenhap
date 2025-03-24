@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3ce-Mypham nhapkhau</title>
+<link href="img/naver_favicon.ico" rel="icon" type="image/x-icon">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/thu-vien-css.css" rel="stylesheet">
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ccc2728dc0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <ul>
+      <li><a href="#">Tải ứng dụng</a></li>
+      <li><a href="#">Đăng nhập</a></li>
+      <li><a href="#">Đăng ký</a></li>
+      <li><a href="#">Theo dõi đơn hàng</a></li>
+      <li><a href="#">Trung tâm chăm sóc</a></li>
+      <li><a href="#">Chính sách</a></li>
+      <li><a href="#">Global</a></li>
+    </ul>
+  </div>
+</div>
+<header>
+  <div class="gach-dai">
+    <div class="container">
+      <nav>
+        <div class="header-top">
+          <div class="header-top-left">
+            <div class="logo"> <a href="index.html"><img src="img/logo black.png" alt="" width="100"></a></div>
+            <div class="search-bar">
+              <input type="text" placeholder="VOUCHER 45% - Đơn từ 99k | Duy nhất 29.03">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass icon-search"></i> </button>
+            </div>
+          </div>
+          <div class="header-top-right"> <a href="#">Tìm 3CE gần bạn</a> <a href="#">Sản phẩm đã xem gần đây</a> <a href="#" class="cart-ion"><i class="fa-regular fa-heart" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i></a> <a href="#" class="cart-ion">
+            <div class="cart-container"> <i class="fa-solid fa-cart-shopping" width="70px" height="100" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></i> <span class="notifi-cart">0</span> </div>
+            </a> <!--language select-->
+            <div class="language">
+              <div class="language-select" onclick="toggleDropdown()"> <img src="img/VI.png" alt="Vietnam flag" id="currentFlag"/> <span id="currentLanguage">VI</span> </div>
+              <div class="language-option" id="languageDropdown">
+                <div class="language-click" onclick="changeLanguage('VI', 'Tiếng Việt','img/VI.png', 'Vietnam flag')"> <img src="img/VI.png" alt="Vietnam flag" /> <span>Tiếng Việt</span> </div>
+                <div class="language-click" onclick="changeLanguage('EN', 'English','img/usa.png', 'USA flag')"> <img src="img/usa.png" alt="USA flag" /> <span>English</span> </div>
+                <div class="language-click" onclick="changeLanguage('JP', '日本語','img/JP.png', 'Japan flag')"> <img src="img/JP.png" alt="Japan flag" /> <span>日本語</span> </div>
+                <div class="language-click" onclick="changeLanguage('KR', '한국어','img/Kr.png', 'Korea flag')"> <img src="img/Kr.png" alt="Korea flag" /> <span>한국어</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <script>
+        function toggleDropdown() {
+            document.getElementById("languageDropdown").classList.toggle("show");
+        }
+
+        function changeLanguage(code, name, flagSrc, flagAlt) {
+            // Thay đổi ngôn ngữ
+            document.getElementById("currentLanguage").innerText = code;
+            
+            // Thay đổi hình ảnh cờ
+            var currentFlag = document.getElementById("currentFlag");
+            currentFlag.src = flagSrc;
+            currentFlag.alt = flagAlt;
+            
+            // Đóng dropdown sau khi chọn
+            document.getElementById("languageDropdown").classList.remove("show");
+            
+            console.log("Changed to: " + name + " with flag: " + flagAlt);
+                
+        }
+
+        // Đóng dropdown khi click ngoài
+        window.onclick = function(event) {
+            if (!event.target.matches('.language-selected') && 
+                !event.target.matches('.language-selected img') && 
+                !event.target.matches('.language-selected span')) {
+                var dropdowns = document.getElementsByClassName("language-options");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+  
+	  <div class="menu-main gach-daidam">
+    <div class="container">
+      <div class="menu d-flex justify-center">
+        <ul>
+          <li> <a href="danh-muc.html"><i class="fa-solid fa-bars mr-10"></i> Danh mục</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">❤️ Sản phẩm bán chạy ❤️</a>
+            <ul class="drop-down">
+              <li><a href="#">Mặt</a></li>
+              <li><a href="#">Mắt</a></li>
+              <li><a href="#">Môi</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Sản phẩm mới</a> </li>
+          <li> <a class="text-hong" href="#">+Sale+</a></li>
+          <li> <a href="#"> Độc quyền thành viên</a>
+            <ul class="drop-down">
+              <li><a href="#">Đặc quyền thành viên</a></li>
+              <li><a href="#">Ưu đãi thành viên</a></li>
+            </ul>
+          </li>
+          <li> <a href="tin tuc.html"> Tin tức</a></li>
+          <li> <a href="lien he.html"> Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+</header>
+<div class="lienhe">
+		<div class="container">
+			<div class="row d-flex justify-between">
+			<div class="col-4">
+			<h3 class="lienhe-header"> Liên Hệ Với Chúng Tôi Nếu Bạn Cần Sự Hỗ Trợ!</h3>
+				<p>Với bất kì thắc mắc cần được giải đáp, Quý khách vui lòng liên hệ với Bộ phận Hỗ trợ khách hàng qua địa chỉ</p> 
+				<br>
+				<p>Email:info@3cevietnam.com</p> <br>
+			<form action="#">
+				<label for="ten"> Họ và tên: </label>  <input type="text" placeholder="Họ tên in hoa" class="form-control" size="40"><br>
+				<label for="phone"> Số điện thoại:</label>  <input type="tel" placeholder="Nhập số điện thoại" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+				<label for="Email"> Email: </label>  <input type="email" placeholder="Nhập email của bạn" class="form-control"><br>
+				<label for="text">Địa chỉ: </label><input type="text" placeholder="Nhập địa chỉ" class="form-control"> <br>
+				<label for="text">Ghi chú: </label><br>
+				<textarea class="form-control" rows="5" cols="40" placeholder="Messenger"></textarea><br>
+				<button type="submit" class="nut-nhap">Gửi liên hệ</button>
+				
+				
+				
+			</form>
+			</div>
+			
+	<!--Xong phần Liên hệ-->
+		<div class="col-8">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.894841985919!2d106.69349684424945!3d10.777003447121523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4743648f3d%3A0x16ce95918cb14834!2sSaigon%20Centre!5e0!3m2!1sen!2sus!4v1742318557987!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				
+				<h4 class="text-hong"> Văn phòng đại diện</h4>
+				<p> <b>Địa chỉ:</b> 65 Lê Lợi, Bến Nghé, Quận 1, Hồ Chí Minh 70000, Vietnam</p>
+				<p> <b>Email:</b> info@3cevietnam.com</p>
+				<p> <b>Thời gian hoạt động:</b> Thứ 2 - Thứ 6 (nghỉ T7-CN)</p>
+				<p> <b>Giờ mở cửa:</b> 09:30 - 17:00</p>
+			</div>
+			
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.471801760131!2d105.832014!3d21.023245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9d18dac95b%3A0x99c8506d774ad71e!2s3CE%20VietNam!5e0!3m2!1svi!2sus!4v1742318349647!5m2!1svi!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<h4 class="text-hong"> Cửa hàng Hà Nội </h4>
+				<p> <b>Địa chỉ:</b> 178 P.Tôn Đức Thắng, Hàng Bột, Đống Đa, Hà Nội 100000, Vietnam </p>
+				<p> <b>Tel:</b> 033.333.3373</p>
+				<p> <b>Thời gian hoạt động:</b> Tất cả các ngày trong tuần</p>
+				<p> <b>Giờ mở cửa:</b> 09:30 - 22:00</p>
+			</div>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.123536376653!2d106.7480337!3d10.801849299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527101cbc989d%3A0x118252e8e5c2824b!2sLixibox%20Estella!5e0!3m2!1svi!2s!4v1742828263669!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<h4 class="text-hong"> Cửa hàng Estella Hồ Chí Minh </h4>
+				<p> <b>Địa chỉ:</b> Tầng 3 - L3-49, Estella Place 88 Song Hành, Phường An Phú, TP Thủ Đức, TP.HCM </p>
+				<p> <b>Tel:</b>0765530577</p>
+				<p> <b>Thời gian hoạt động:</b> Tất cả các ngày trong tuần</p>
+				<p> <b>Giờ mở cửa:</b> 09:30 - 22:00</p>
+
+			</div>
+
+			</div>
+		</div></div>
+	<!--Xong phần maps-->	
+</div>
+</body>
+<!--footer-->
+<footer>
+  <div class="container">
+	  <div class="row d-flex justify-between">
+		  <div class="col-4">
+			  <div class="footer-logo">  <a href="#" ><img src="img/logo white.png" width="80px" alt="logo 3ce"> </a>
+			  <h3>3CE-Viet Nam</h3>
+			  </div>
+			  <div class="gray">
+			  <p><b>Trụ sở Việt Nam:</b>Tầng 10, Saigon center, quận 1, Tp.HCM</p>
+      <p><strong>Email:</strong>info@3cevietnam.com</p>  
+      <p>Công ty 3CE VIỆT NAM, MST/ĐKKD/QĐTL: 0317189971 Đăng ký thay đổi lần thứ 4 ngày 29 tháng 05 năm 2024 - Cấp tại HCM</p>
+				  </div>
+			  <div class="footer-signup">
+        <h4>ĐĂNG KÝ TRỞ THÀNH HỘI VIÊN NHẬN ƯU ĐÃI HẤP DẪN</h4>
+        <div class="signup-form">
+          <input type="email" placeholder="nhập email của bạn" class="email-input">
+          <button class="signup-btn">Gửi</button>
+        </div>
+      </div>
+		  </div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>THÔNG TIN</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Hệ thống cửa hàng</a></li>
+          <li><a href="#">Ưu đãi thành viên</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+	  	</div>
+		  <div class="col-2">
+			  <div class="footer-col">
+        <h4>MUA SẮM</h4>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Tìm kiếm</a></li>
+          <li><a href="#">Bán chạy</a></li>
+          <li><a href="#">Ưu đãi</a></li>
+        </ul>
+      </div>
+	   
+	  	</div>
+		  <div class="col-2">
+		  <div class="footer-col">
+        <h4>CÁC CHÍNH SÁCH</h4>
+        <ul>
+          <li><a href="#">Chính sách bán hàng</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách đổi trả - bảo hành</a></li>
+          <li><a href="#">Phương thức thanh toán</a></li>
+          <li><a href="#">Điều khoản & Điều kiện</a></li>
+          <li><a href="#">Chính sách kiểm hàng</a></li>
+        </ul>
+      </div> </div>
+		  <div class="col-2">
+			 <h4>THEO DÕI CHÚNG TÔI</h4>
+        <div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-zalo"></i></a></div>
+        <div class="trust-badge"><img src="img/bộ công thương.png" alt="Đã thông báo Bộ Công Thương">
+			  </div> 
+	  </div> </div>
+</div>
+    
+  <!-- Copyright section -->
+<div class="gach-trang">
+  <div class="copyright">
+    <p>© Copyright 2025, Công ty 3CE Việt Nam. All rights reserved.</p>
+  </div></div>
+</footer>
+</html>
